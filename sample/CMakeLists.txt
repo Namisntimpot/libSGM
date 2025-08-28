@@ -30,6 +30,11 @@ add_executable(stereosgm_reprojection stereosgm_reprojection.cpp ${SRCS_COMMON})
 target_include_directories(stereosgm_reprojection PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(stereosgm_reprojection sgm ${OpenCV_LIBS})
 
+# sample test time
+add_executable(stereosgm_test_time stereosgm_test_time.cpp ${SRCS_COMMON})
+target_include_directories(stereosgm_test_time PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(stereosgm_test_time sgm ${OpenCV_LIBS})
+
 # sample image with cv::GpuMat
 if(BUILD_OPENCV_WRAPPER)
 	add_executable(stereosgm_image_cv_gpumat stereosgm_image_cv_gpumat.cpp ${SRCS_COMMON})
